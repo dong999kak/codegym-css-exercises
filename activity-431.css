@@ -1,0 +1,11 @@
+* { box-sizing: border-box; }
+body { margin: 32px; font-family: Arial, sans-serif; }
+h1 { color: #333; }
+#menu, #menu ul { margin: 0; padding: 0; }
+#menu ul { list-style: none; }
+#menu li { position: relative; width: 160px; min-height: 36px; background: #151515; line-height: 36px; }
+#menu a { display: block; padding: 0 16px; color: #fff; text-decoration: none; }
+#menu li:hover, #menu a:focus-visible { background: #c93636; }
+#menu ul ul { position: absolute; z-index: 2; top: 0; left: 160px; visibility: hidden; }
+#menu li:hover > ul, #menu li:focus-within > ul { visibility: visible; }
+

@@ -1,0 +1,18 @@
+* { box-sizing: border-box; }
+body { margin: 0; background: #f4f5f7; color: #222; font-family: Arial, sans-serif; }
+.header { position: sticky; top: 0; z-index: 5; display: flex; align-items: center; gap: 18px; padding: 14px 5%; color: white; background: #214f78; }
+.logo { color: #ffd166; font-size: 1.6rem; font-weight: 800; text-decoration: none; letter-spacing: .08em; }
+.head-link { display: flex; gap: 4px; padding: 0 5%; background: #fff; box-shadow: 0 2px 5px #0002; }
+.head-link a { padding: 13px 16px; color: #345; text-decoration: none; }
+.head-link a:hover, .head-link .active { color: #fff; background: #e17b42; font-weight: bold; }
+.content { display: grid; grid-template-columns: 260px minmax(0, 1fr); gap: 20px; max-width: 1180px; margin: 24px auto; padding: 0 18px; }
+.left-content, .right-content { padding: 18px; border-radius: 8px; background: white; box-shadow: 0 2px 8px #0001; }
+.left-content h2 { margin-top: 0; color: #214f78; font-size: 1.15rem; }
+.movie { display: block; width: 100%; padding: 12px; border: 0; border-bottom: 1px solid #eee; background: white; text-align: left; cursor: pointer; }
+.movie:hover, .movie.active { color: #bc5524; background: #fff4eb; font-weight: bold; }
+.player { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #111; }
+.player iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+.local-player { display: block; width: min(400px,100%); margin: 18px auto; }
+footer { padding: 18px; color: white; background: #214f78; text-align: center; }
+@media (max-width: 700px) { .content { grid-template-columns: 1fr; } .left-content { order: 2; } .right-content { order: 1; } .head-link { overflow-x: auto; white-space: nowrap; } }
+

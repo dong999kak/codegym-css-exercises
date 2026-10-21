@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kho phim hoạt hình</title>
+    <link rel="stylesheet" href="activity-436.css">
+</head>
+<body>
+    <header class="header"><a class="logo" href="#home">MẦU MÂY</a><span>Phim hoạt hình vui và bổ ích</span></header>
+    <nav class="head-link" aria-label="Điều hướng"><a class="active" href="#home">Trang chủ</a><a href="#new">Phim mới</a><a href="#popular">Xem nhiều</a><a href="#about">Giới thiệu</a></nav>
+    <main class="content">
+        <aside class="left-content"><h2>Danh sách phim</h2><button class="movie active" data-id="aqz-KE-bpKQ" data-title="Chú thỏ dũng cảm">Chú thỏ dũng cảm</button><button class="movie" data-id="M7lc1UVf-VE" data-title="Cuộc phiêu lưu trong rừng">Cuộc phiêu lưu trong rừng</button><button class="movie" data-id="ScMzIvxBSi4" data-title="Ngày hội sắc màu">Ngày hội sắc màu</button></aside>
+        <section class="right-content" aria-live="polite"><h1 id="movie-title">Chú thỏ dũng cảm</h1><div class="player"><iframe id="player" src="https://www.youtube-nocookie.com/embed/aqz-KE-bpKQ" title="Phim hoạt hình" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div><video class="local-player" controls preload="none"><source src="media/cartoon-intro.mp4" type="video/mp4">Trình duyệt không hỗ trợ video HTML5.</video><p>Phim hoạt hình vui vẻ, phù hợp để cả gia đình cùng thưởng thức.</p></section>
+    </main>
+    <footer>© 2026 Mầu Mây. Nội dung dành cho gia đình.</footer>
+    <script>
+        const movies = document.querySelectorAll('.movie');
+        movies.forEach((movie) => movie.addEventListener('click', () => {
+            movies.forEach((item) => item.classList.remove('active'));
+            movie.classList.add('active');
+            document.querySelector('#movie-title').textContent = movie.dataset.title;
+            document.querySelector('#player').src = `https://www.youtube-nocookie.com/embed/${movie.dataset.id}`;
+        }));
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+body { margin: 32px; font-family: Arial, sans-serif; }
+#menu { min-height: 32px; background: #000; border: 1px solid #cdcdcd; }
+#menu ul { margin: 0; padding: 0; list-style: none; }
+#menu > ul { display: flex; }
+#menu li { position: relative; }
+#menu a { display: block; width: 120px; min-height: 32px; padding: 0 10px; color: #fff; background: #000; line-height: 32px; text-align: center; text-decoration: none; }
+#menu li li a { width: 210px; text-align: left; }
+#menu a:hover, #menu a:focus-visible { background: #c22; }
+#menu ul ul { position: absolute; z-index: 3; top: 100%; left: 0; visibility: hidden; }
+#menu li:hover > ul, #menu li:focus-within > ul { visibility: visible; }
+

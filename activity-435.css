@@ -1,0 +1,19 @@
+* { box-sizing: border-box; }
+body { margin: 0 auto; max-width: 1100px; padding: 0 20px; font: 14px Arial, sans-serif; color: #222; }
+.topbar { display: flex; align-items: center; min-height: 42px; background: #222; }
+.topbar a { padding: 14px 16px; color: #fff; text-decoration: none; }
+.logo, .login { background: #111; }
+.topbar nav { display: flex; }
+.topbar a:hover { background: #555; }
+.login { margin-left: auto; }
+.columns { display: grid; grid-template-columns: 17% minmax(0, 1fr) 17%; min-height: 360px; }
+.links { padding: 24px; background: #f1f1f1; }
+.links a { display: block; margin: 12px 0; color: #5684ad; }
+.content { padding: 16px; }
+.content h1 { margin-top: 0; }
+.content p { line-height: 1.6; }
+.ads { padding: 18px; background: #f1f1f1; }
+.ads div { display: grid; place-items: center; height: 70px; margin-bottom: 12px; border: 1px solid #ddd; background: white; color: #666; }
+footer { padding: 12px; text-align: center; background: #555; color: white; }
+@media (max-width: 640px) { body { padding: 0 8px; } .topbar { flex-wrap: wrap; } .topbar nav { order: 3; width: 100%; } .topbar nav a { flex: 1; text-align: center; padding: 12px 6px; } .columns { grid-template-columns: 1fr; } .links { display: flex; justify-content: space-around; padding: 8px; } .links a { margin: 8px; } .ads { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; } }
+

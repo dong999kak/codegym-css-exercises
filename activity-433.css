@@ -1,0 +1,12 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Arial, sans-serif; color: #262626; }
+.site-header { padding: 1px 22px; background: #eee; }
+.site-nav { display: flex; gap: 24px; padding: 12px 22px; background: #333; }
+.site-nav a { color: white; text-decoration: none; }
+.site-nav a:hover { text-decoration: underline; }
+.layout { display: grid; grid-template-columns: minmax(0, 3fr) minmax(180px, 1fr); gap: 24px; padding: 22px; }
+.news-section article { border-bottom: 1px solid #ddd; padding: 8px 0 16px; }
+.sidebar { padding: 16px; background: #f3f3f3; }
+footer { padding: 14px 22px; color: white; background: #333; }
+@media (max-width: 640px) { .layout { grid-template-columns: 1fr; } .site-nav { flex-wrap: wrap; } }
+
